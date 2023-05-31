@@ -176,23 +176,36 @@ function myFunction(parameters, callback){
 
 // getDadJoke();
 
-const jokeObject = {id: 'qjV8EIRfVnb', 
-joke: 'What did the shy pebble wish for? That she was a little boulder.' }
+// const jokeObject = {id: 'qjV8EIRfVnb', 
+// joke: 'What did the shy pebble wish for? That she was a little boulder.' }
 
-const postDadJoke = async(jokeObj) =>{
-    const response = await fetch('https://httpbin.org/post', {
-        method: "POST",
-        headers:{
-            // Accept: "application/json"
-            // Accept: "text/plain"
-            "Content-Type" : "application/json"
-        },
-        body:JSON.stringify(jokeObj)
+// const postDadJoke = async(jokeObj) =>{
+//     const response = await fetch('https://httpbin.org/post', {
+//         method: "POST",
+//         headers:{
+//             // Accept: "application/json"
+//             // Accept: "text/plain" //here we are expectinf the api to send data in the form of text
+//             "Content-Type" : "application/json"
+//         },
+//         body:JSON.stringify(jokeObj)
 
+//     });
+//     const jsonResponse =  await response.json();
+//     console.log(jsonResponse);
+// }
+
+// postDadJoke(jokeObject);
+
+const requestDadJoke = async(firstname, lastname) =>{
+    const response = await fetch(`http://api.icndb.com/jokes/random?firstName=${firstname}&lastName=${lastname}`,{
+        mode: 'no-cors',
     });
+        
     const jsonResponse =  await response.json();
-    console.log(jsonResponse);
+    console.log(jsonResponse.value);
 }
 
-postDadJoke(jokeObject);
+requestDadJoke("Arnold", "sCHWARZNEGGAR");
+
+//abstract into function
 

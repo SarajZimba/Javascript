@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Heading</h1>
+    <button onclick="clickme()">Click here</button>
+    <input type="text" id="i">
+    <!-- Javascript
+        programming for web
+        simple, easy to learn
+        syntax not so strict
+
+        -change content
+        -change style
+        -make page dynamic,
+
+
+
+    -->
+
+    <script>
+        console.log("Hello World");
+        document.write("Hiii")
+
+        function clickme(){
+            //document.getElementById('head').innerHTML = "Hello there"//works in all opening and closing tag
+            //document.getElementById('i').value = "Hello there"//works in all opening and closing tag
+            //window.alert("Hi there")//alert box
+            //window.confirm("Are you sure?")//confirmation box
+            //window.print();//allows to print .. 
+
+            //temp = prompt("Enter any value");
+            temp = document.getElementById('i').value;
+            document.write(temp);
+
+        }
+        /*
+            outputs in javascript
+                console.log() -error loading
+                document.write - testing/overwrites existing html content
+                .innerHTML - to write inside html elements
+                alert - to show alert
+                print - to print the webpage
+
+
+            Inputs in javascript
+            prompt - to get input from user / alert messages
+            using form elements
+
+
+
+            Datatypes in Javascript
+
+
+            .Number
+            .String
+            .Boolean
+            .NUll
+            .Undefined
+            .Symbol
+
+            let,const, var
+
+            let,var - value can be reassigned
+            const - constants value cannot be reassigned
+
+            let, const - block scope
+                cannot be redefined
+
+            var - global scope
+                canbe redefined in the same scope
+
+
+           
+
+        */
+
+        //
+        /*let a ="a"
+        var b ="b"
+        const c = "c"
+        
+
+       {
+        //let a = 5 //update allowed
+        var b= 10 //update allowed
+        const c = 20 //update not allowed
+        document.write("<br>a="+a + "<br>b="+ b +"<br>c=" +c)
+       }
+        //let a = 5 //update aloowed
+        //var b= 10 //update allowed
+        //const c = 20 //update not allowed
+        document.write("<br>a="+a + "<br>b="+ b +"<br>c="+c)*/
+
+        let a=5
+        document.write(a + "<br>" + typeof(a))
+
+    </script>
+
+</body>
+</html>
