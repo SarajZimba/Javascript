@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+   /*   Arithmetic Operators 
+        Comparision Operators
+            == checks the value
+            === checks the type also
+        Logical Operators
+            && And
+            ||  Or
+            !   Not
+        Assignment Operators
+            =
+            +=
+            -=
+            *=
+            /=
+            %=
+            **=
+        Ternary Operators
+            a?b:c
+            a is condition
+            executes b if condition is true else executes c when condition is false
+        String Operators
+            +
+
+
+        Type
+
+            typeof() -> gets data types
+            instance of() -> returns class
+        Bitwise Operators
+            &
+            |
+            ^
+            ~
+            <<
+            >>
+            >>> - Zero fill Right shift
+
+
+   */
+
+   //arithmetic operators
+   let a = 6
+   let b = 4
+
+        var sum = a + b
+        document.write("Sum =" + sum)
+        let diff = a - b
+        document.write("<br>Diff =" + diff)
+        let prod = a * b
+        document.write("<br>Product =" + prod)
+        let div = a / b
+        document.write("<br>div =" + div)
+        let quo = Math.floor(a/b)
+        document.write("<br>Quo =" + quo)
+        let rem = a % b
+        document.write("<br>Remainder =" + rem)
+        let expo = a**3
+        document.write("<br>6<sup>3</sup>=" + expo)
+
+
+        a=6
+        //post increment
+        document.write("<br> a++ =" + (a++) )
+        document.write("<br> a =" + (a) )
+        //post increment
+        document.write("<br> ++a =" + (++a) )
+        //pre decrement
+        document.write("<br> --a =" + (--a) )
+        //post decrement
+        document.write("<br> a-- =" + (a--) )
+        document.write("<br> a =" + (a) )
+        //assignment
+        a += 3
+        // a = a + 3
+        document.write("<br>a+=3 => a =" + a)
+        a -= 4
+        document.write("<br>a-=4 => a =" + a)
+        a *= 4
+        document.write("<br>a*=4 => a =" + a)
+        a /= 4
+        document.write("<br>a/=4 => a =" + a)
+
+        a = 6
+        a%=4
+        document.write("<br> a%=4 => a =" + a)
+
+        a**=5
+        document.write("<br> a**=5 => a=" + a + "<br><br>")
+
+        //ternary operator
+        a = 9
+        b = 6
+
+        a>b ? document.write("a is greater than b<br>") : document.write("b is greater than a<br>");
+
+        c = a>b?a : b
+        document.write("<br>the greater value is " + c + "<br><br>")
+
+        //comparision operator
+            a<b ? document.write("a is less than b<br>"):document.write("b is less than a<br>")
+            a<=b ? document.write("a is less than or equal to b <br>"):document.write("b is less than or equal to a<br>")
+            a>=b ? document.write("a is greater than or equal to b <br>"):document.write("b is greater than or equal to a<br>")
+        
+        //Logical Operators
+            a = 45
+            b = 35
+
+            a==b ? document.write("<br>a is equal to b"):document.write("<br>a is not equal to b")
+            a===b ? document.write("<br>A IS EQUAL TO B"):document.write("<br>A IS NOT EQUAL TO B<br>")
+
+            a!=b ? document.write("<br>a is not equal to b"):document.write("<br>a is equal to b")
+            a!==b ? document.write("<br>A IS NOT EQUAL TO B"):document.write("<br>A IS  EQUAL TO B");
+
+            (a%5==0 && b%5==0) ? document.write("<br>a and b are divisible by 5"):document.write("<br>a and b are not dicisible by 5");
+            (a%5==0 || b%5==0) ? document.write("<br>a or b are divisible by 5"):document.write("<br>a or b are not dicisible by 5");
+            (!(a%5==0) || !(b%5==0)) ? document.write("<br>a or b are not divisible by 5"):document.write("<br>a or b are divisible by 5");
+
+        //Bitwise operator
+
+                a = 2
+                b= 6
+                c = a & b
+                document.write("<br> a & b = " + c)
+                c = a| b
+                document.write("<br> a | b =" + c)
+                c = a ^ b
+                document.write("<br> a ^ b =" + c)
+                c = ~a
+                document.write("<br> ~a = " + c )
+
+
+
+
+            
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //conditional statemants
+        /* if statement
+        syntax:
+            1.if(condition){
+                statements if the condition is true
+
+            }
+
+            2.if-else statement
+                if(condition){
+                    statements if the condition is true
+                }
+                else{
+                    statements if the condition is false
+                }
+            }
+
+            3.if - else if -else
+            syntax:
+            if(condition1){
+                statements if condition1 is true
+            }
+            else if(condition2){
+                statements if condition2 is true
+            }
+            --
+            -----
+            else{
+                statements if all abbove condition are false
+            }
+            */
+
+            /*let a = Number(prompt("Enter a number"));
+            let b = Number(prompt("Enter a number"));
+            let c = Number(prompt("Enter a number"));*/
+            /* if(a<0){
+                document.write("a is negative");
+            }
+            else if(a>0){
+                document.write("a is positive");
+            }
+            else{
+                document.write("a is equal to zero")
+            } */
+
+           /* if(a%2==0){
+                document.write("a is even")
+            }
+            else{
+                document.write("a is odd")
+            } */
+
+            /*if(a + b < c && b+c <  a && a + c < b){
+                document.write("It is a triangle")
+            }
+
+            else{
+                document.write("It is not a triangle")
+            }*/
+
+            /*if(a === b && b === c && c===a){
+                document.write("It is an equilateral triangle")
+            }
+            else if( a===b || b ===c || c===a){
+                document.write("It is an isosceles triangle")
+
+            }
+
+            else {
+                document.write("It is a scalene triangle")
+             }
+             */
+
+            function month(d){
+                months = {
+                    1 : {Name:'jan', days: 20},
+                    2 : {Name:'feb', days: 20},
+                    3 : {Name:'march', days: 20},
+                    4 : {Name:'april', days: 20},
+                    5 : {Name:'may', days: 20},
+                    6 : {Name:'june', days: 20},
+                    7 : {Name:'july', days: 20},
+                    8 : {Name:'august', days: 20},
+                    9 : {Name:'september', days: 20},
+                    10 : {Name:'october', days: 20},
+                    11 : {Name:'nov', days: 20},
+                    12 : {Name:'dec', days: 20}
+
+                }
+              
+                    document.write(months[d].Name + "<br>");
+                    document.write(months[d].days);
+                
+                
+
+
+            }
+
+            let d = Number(prompt("Enter a number"));
+            month(d)
+            
+    </script>
+</body>
+</html>
