@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+        loops
+        programming stuctures to perform same/similar task repeatedly
+
+        1.initialization : when to start
+        2.condition check: upto when to repeat
+        3. statements: when to repeat
+        4.next: how to proceed(increment/decrement)
+
+    1.while
+    2.do-while
+    3.for
+
+
+    1.while:
+
+        syntax:
+            initialization
+            while(condition-check){
+                statements
+                next iteration
+            }
+
+
+        2.do-while:
+
+            syntax:
+            initialization
+            do{
+                statements
+                next
+            }
+            while(condition-check)
+    */
+
+    //Wap to print hello world 10 times
+
+    let count = 100
+    while(count <= 10){
+        document.write("hello world<br>")
+        count++;
+    }
+
+    document.write(count + ' count from while  <br>')
+
+    //do-while example
+
+    count = 100 //initialization
+    do{
+        document.write("hello world<br>") //statements
+        count++                            //check
+
+    }
+    while(count <= 10);                    //condition  
+    document.write(count + ' from do-while')
+</script>
+</body>
+</html>
