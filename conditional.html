@@ -81,7 +81,45 @@
              }
              */
 
-            function month(d){
+             /* 
+                nested if else
+                if(condition1){
+                    if(conditionA){
+                    statements if condition1 and conditionA
+                    }
+
+                
+                else{
+                    statements if condition1 is true but conditionA is false
+
+                }
+            }
+
+            else{
+                if(conditionB){
+                    statements if condition1 is false but conditionB is true
+                }
+                else{
+                    statements if condition1 and conditionB are false
+                }
+            }
+
+            Compound conditinal statements
+
+            if(condition1 && conditon2 && condition3){
+                statements if all the conditions are true
+            }
+            if(condition1 || conditon2 || condition3){
+                statements if all the conditions are true
+            }
+
+            Wap to find greataest among three numbers
+
+
+
+             */
+
+            /*function month(d){
                 months = {
                     1 : {Name:'jan', days: 20},
                     2 : {Name:'feb', days: 20},
@@ -109,6 +147,97 @@
             let d = Number(prompt("Enter a number"));
             month(d)
             
+
+            let a = Number(prompt("Enter numbers"))
+            let b = Number(prompt("Enter numbers"))
+            let c = Number(prompt("Enter numbers"))
+
+            if(a>b){
+                if(a>c){
+                    document.write("A is the greatest number")
+                }
+                else{
+                    document.write("c is greatest")
+                }
+            }
+            else{
+                if(b>c){
+                    document.write("b is greatest")
+                }
+                else{
+                    document.write("c is greatest", c)
+                }
+            }
+            
+            WAP to input marks in 5 subbjects.Check if the student is pass or fail and also caculate his total, percentage and grades
+
+            90% or above - A+
+            80% or above - A+
+            70% or above - A+
+            60% or above - A+
+            50% or above - A+
+            40% or above - A+
+
+
+            */
+
+            let a = Number(prompt("Enter marks in Maths"))
+            let b = Number(prompt("Enter marks in Science"))
+            let c = Number(prompt("Enter marks in Social"))
+            let d = Number(prompt("Enter marks in Gk"))
+            let e = Number(prompt("Enter marks in Computer"))
+
+            let total_student = a + b + c + d + e
+            let total = 500
+            let percent = ((total_student)/total)*100
+
+            if( a > 40 && b > 40 && c > 40 && d > 40 && 6 > 40){
+                document.write("The student has passed")
+            
+            if (percent < 40){
+                document.write("Ng")
+            
+
+            }
+             else{
+                if
+                (percent >=40 && percent < 50){
+                document.write("D")
+             }
+                else if
+                (percent >=50 && percent < 60){
+                document.write("D+")
+             }
+               else if
+                (percent >=60 && percent < 70){
+                document.write("C")
+             }
+               else if
+                (percent >=70 && percent < 80){
+                document.write("C+")
+             }
+               else if
+                (percent >=80 && percent < 90){
+                document.write("B")
+             }
+
+             else{
+                if(percent < 100){
+                document.write("A+")
+                }
+             }
+             
+            }
+
+        }
+
+        else{
+            document.write("The student has failed !!sorry")
+        }
+
+           
+
+
     </script>
 </body>
 </html>

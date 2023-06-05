@@ -45,7 +45,7 @@
 
     //Wap to print hello world 10 times
 
-    let count = 100
+    /*let count = 100
     while(count <= 10){
         document.write("hello world<br>")
         count++;
@@ -63,6 +63,98 @@
     }
     while(count <= 10);                    //condition  
     document.write(count + ' from do-while')
+
+    for-loop
+
+*/
+    let num = 1
+    while(num <=10){
+        document.write(num + '<br>')
+        num++
+    }
+
+    document.write("<br> odd numbers <br>")
+    let n = 1
+    do{
+        if(n % 2 != 0){
+            document.write(n + "<br>")
+        }
+        n++
+    }
+    while(n <= 99);
+
+    document.write("<br> Even numbers <br>")
+
+/*    let a = 1
+    var b = 2
+    while(a <= 10 ){
+        if(b%2==0){
+            document.write(b)   
+        }
+        b++;
+        a++;
+    }*/
+
+  /*  let even=2
+    count= 1
+    while(count <= 20)
+    {
+        document.write(even + "<br>")
+        count++
+        even = even + 2
+       
+    }*/
+
+    /*count = 0
+    choice = prompt("do you want to increase count?  ")
+    while(choice == "y"){
+        count++;
+        choice = prompt("do you want to increase count? enter 'y' if yes.")
+
+    }
+    document.write("you have increased count to " + count)
+    */
+
+    //Wap to let user choose one of the options 1. Add 2. subtract 3.Product 4.Division 4.Exit(anything except 1 to 40) which should run indefinitely unless the user opts to exit
+
+  
+ 
+    choice = Number(prompt("Anything from 1 to 4"))
+    while(choice !=5){   
+        let a = Number(prompt("Enter 1st number"))
+        let b = Number(prompt("Enter 2nd number"))
+
+        switch(choice){
+            case 1:
+                document.write("add")
+                let add = a + b;
+                document.write(add)
+                break;
+            case 2:
+                document.write("diff")
+                let diff = a - b;
+                document.write(diff)
+                break;
+            case 3:
+                document.write("mult")
+                let mult = a * b;
+                document.write(mult)
+                break;
+            case 4:
+                document.write("div")
+                let div = a / b;
+                document.write(Math.floor(div))
+                let rem = a % b
+                document.write(rem)
+                break;
+            
+            default:
+                document.write("You have choosen wrong option")
+
+        }
+        choice = Number(prompt('1.Add 2.Diff 3.Prod 4.Div'))
+    }
+    document.write("You have terminated")
 </script>
 </body>
 </html>
