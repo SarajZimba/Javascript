@@ -88,7 +88,7 @@
         }
 
         document.write("The hcf is : " + a)
-        */
+        
 
         let a = Number(prompt("Enter a number to check whether it is prime or not"))
         var count = 0;
@@ -105,7 +105,17 @@
         else{
             document.write("The number is not prime")
         }
-        
+        // program that gives the sum of the number and ask the user again if he wants to perform the operation again
+        do{
+            let a = Number(prompt("Enter the first number"))
+            let b = Number(prompt("Enter the first number"))
+            let sum = a + b
+            console.log(sum)
+            //document.write("The sum is: " + sum + "<br>")
+            var n = prompt("Do you wish to contnue . Press 'n' to exit")
+        }
+        while(n != 'n')
+        */
     </script>
 </body>
 </html>
