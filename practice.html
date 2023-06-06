@@ -211,10 +211,18 @@
 
         let n = Number(prompt("Enter upto which term"));
         sum=0;
+        minus = 0;
+        total = 0;
         for(i =1; i <=n; i++){
+            if(i % 2 != 0){
             sum = sum + (1/i);
+            }
+            else{
+                minus = minus + (1/i);
+            }
         }
-        document.write(sum)
+        total = sum -minus
+        document.write(total)
 
     </script>
 </body>
