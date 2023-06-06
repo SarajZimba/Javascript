@@ -53,6 +53,7 @@
         }
         document.write("<br>The reversed num of " + copy + " is " + rev)
         
+        //Program to get the sum of the even and odd numbers present in the number
         let integers = Number(prompt("Enter any num"));
         let even = 0;
         let odd = 0;
@@ -68,8 +69,8 @@
         }
         document.write("Sum of even is " + even + "<br>")
         document.write("Sum of odd is " + odd)
-        */
-
+        
+        //Program for hcf usinf euclidean algorithm
         let a = Number(prompt("Enter a number"));
         let b = Number(prompt("Enter a number"))
         var r;
@@ -87,6 +88,23 @@
         }
 
         document.write("The hcf is : " + a)
+        */
+
+        let a = Number(prompt("Enter a number to check whether it is prime or not"))
+        var count = 0;
+        for(let i =2; i < a ; i ++){
+            if (a % i == 0){
+                count =1;
+            }
+        }
+
+        if(count == 0){
+            document.write("The number is prime")
+
+        }
+        else{
+            document.write("The number is not prime")
+        }
         
     </script>
 </body>
