@@ -117,7 +117,7 @@
         while(n != 'n')
 
 
-        */
+       
             var positive=0;
             var neg=0;
             var zeros = 0;
@@ -140,6 +140,34 @@
         document.write("Positive numbers entered : " + positive)
         document.write("<br>Negative numbers entered : " + neg)
         document.write("<br>Zeros numbers entered : " + zeros)
+         */
+
+        
+         var num = Number(prompt("Enter the number"));
+          
+         var largest = num;
+         var smallest = num;
+         do{
+            var n = prompt("Do you wish enter more . Press 'n' to exit")
+            if(n == 'n'){
+                break;
+            }
+            var num1 = Number(prompt("Enter the number"))
+            if (num1 > largest){
+                largest = num1
+            }
+            if(num1 < smallest){
+                smallest = num1
+            }
+            
+
+
+            
+         }
+         while(n != 'n')
+
+         document.write("Largest number entered : " + largest)
+        document.write("<br>Smallest number entered : " + smallest)
     </script>
 </body>
 </html>
