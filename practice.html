@@ -140,7 +140,7 @@
         document.write("Positive numbers entered : " + positive)
         document.write("<br>Negative numbers entered : " + neg)
         document.write("<br>Zeros numbers entered : " + zeros)
-         */
+        
 
         
          var num = Number(prompt("Enter the number"));
@@ -168,6 +168,21 @@
 
          document.write("Largest number entered : " + largest)
         document.write("<br>Smallest number entered : " + smallest)
+         */
+         var sum = 0;
+         for(var i = 1;i<=500; i++){
+            var num = i;
+            sum = 0;
+            while(num != 0){
+            var r = num % 10;
+            sum = sum + (r*r*r);
+            num = Math.floor(num/10);
+            
+            }
+            if(sum == i){
+                document.write(sum + " is an armstrong number<br>");
+            }
+         }
     </script>
 </body>
 </html>
