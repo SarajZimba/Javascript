@@ -115,7 +115,31 @@
             var n = prompt("Do you wish to contnue . Press 'n' to exit")
         }
         while(n != 'n')
+
+
         */
+            var positive=0;
+            var neg=0;
+            var zeros = 0;
+        do{
+            let num = Number(prompt("Enter the number"));
+            
+            if(num > 0){
+                positive++;
+            }
+            else if (num < 0){
+                neg++;
+            }
+            else{
+                zeros++;
+            }
+            var n = prompt("Do you wish enter more . Press 'n' to exit")
+
+        }
+        while(n != 'n')
+        document.write("Positive numbers entered : " + positive)
+        document.write("<br>Negative numbers entered : " + neg)
+        document.write("<br>Zeros numbers entered : " + zeros)
     </script>
 </body>
 </html>
