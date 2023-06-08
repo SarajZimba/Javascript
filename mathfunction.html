@@ -9,8 +9,24 @@
 <body>
     <script>
         document.write(Math.PI)
-        document.write(Math.sqrt(49))
-        document.write(Math.pow(5, 3))
+        document.write("<br>" + Math.sqrt(49))
+        document.write("<br>" + Math.pow(5, 3))
+
+        let r = Math.random() * 50; //returns fractional number between 0 and 1 then multiply by 50 to make it to the range of 0 to 50
+        document.write("<br>" + r)
+
+        let num = Math.trunc(r);// returns only integer part
+        document.write("<br>" + num)
+
+        round = Math.round(r);
+        document.write("<br>" + round)
+
+        ceil = Math.ceil(r)
+        document.write("<br>" + ceil)
+        
+        floor = Math.floor(r)
+        document.write("<br>" + floor)
+       
     </script>
    
 </body>
