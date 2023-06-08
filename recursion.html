@@ -38,6 +38,16 @@
         }
         
 
+        let sum = n =>{
+            if (n==1){
+                return 1
+            }
+            else {
+                return n + sum(n-1)
+            }
+        }
+        document.write("Sum of 10 natural number is :" + sum(10))
+
     </script>
   
 </body>
