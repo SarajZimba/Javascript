@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        //function
+        /*
+            syntax:
+            function function_name(parameters){
+                statements;
+                return;
+            }
+
+            1.without parameters without return
+                function function_name(){
+                    statements;
+                }
+
+            2.with parameters without return
+                
+            function function_name(parameters){
+                statements;
+            }
+
+            3.without parameter with return
+                function function_name(){
+                    statements;
+                    return ;
+                }
+
+                c = function_name();
+
+            function_name(aruments);
+
+            4.with parameter with return
+
+                function function_name(parameters){
+                    statements;
+                    return ;
+                }
+                d = function_name(arguments);
+        */
+
+            /*function add(){
+                let a = Number(prompt("Enter first number"));
+                let b = Number(prompt("Enter second number"));
+                document.write("Sum =" + (a + b));
+            }
+            add()
+
+            function subtract(m, n){
+                document.write("Sub =" + (m - n));
+            }
+            let c = Number(prompt("Enter first number"))
+            let d = Number(prompt("Enter second number"))
+            sub = subtract(c, d)
+            document.write("Sub =" + sub);
+
+
+            function product(){
+                let a = Number(prompt("Enter first number"));
+                let b = Number(prompt("Enter second number"));
+                return a*b;
+
+            }
+            let value = product()
+            document.write("Product = " + value)
+
+            function dicision(f, g){
+                return (f /g)
+            }
+            let ans = dicision(8, 4)
+            document.write("Division = " + ans)
+            */
+
+            /*
+                arrow function
+                let/const function_name = (parameters) => {
+                    statements
+                    return
+                }
+            
+
+            let add = () =>{
+                let a = Number(prompt("enter a."))
+                let b = Number(prompt("enter b"))
+                document.write("sum = " + (a+b))
+            }
+            add()
+
+            let sub = () =>{
+                let a = Number(prompt("enter a."))
+                let b = Number(prompt("enter b"))
+                return (a - b)
+            }
+
+            let ans = sub()
+            document.write("Sub = " + ans)
+
+            const product = (m,n) =>{
+                document.write("Product = " + (m *n))
+            }
+            let m = Number(prompt("enter m."))
+            let n = Number(prompt("enter n"))
+            product(m,n)
+
+            const div = (t, k) =>{
+                return (t/k);
+            }
+            let t = Number(prompt("enter t."))
+            let k = Number(prompt("enter k"))
+            let division = div(t, k)
+            document.write("Division = " + division)
+
+            const square = x => x*x
+            document.write("Square = " + square(5))
+            */
+
+            //Wap to check if a number is odd or even
+
+
+            /*
+            let check = n =>{
+                if (n%2 == 0){
+                    document.write("It is even <br>")
+
+                }
+                else{
+                    document.write("It is odd")
+                }
+            }
+
+            m = Number(prompt("Enter a number"))
+            check(m)
+
+            let fact = n =>{
+                result = 1;
+                for(let i = 1; i <=n; i++){
+                    result = result * i;
+                }
+                return result;
+            }
+            m = Number(prompt("Enter a number"))
+            n = fact(m)
+            document.write("The factorial is = " + n)
+          
+
+            let series = n =>{
+
+                for(let i =1 ; i <=n ; i++){
+                    m = (4*i) - 3
+                    document.write(m + "<br>")
+                }
+            }
+            n = Number(prompt("Enter up to which term"))
+            series(n)
+              */
+            /*
+              let isPrime = p =>{
+                    va = 0
+                    for(let i = 2 ; i < p; i++){
+                        if(p % i == 0){
+                            va = 1
+                            
+                        }
+
+                     
+                    }
+                    if(va == 1){
+                        document.write("It is composite")
+                    }
+                    else{
+                       
+                        document.write("It is prime")
+                    }
+              }
+
+              n = Number(prompt("Enter up to which term"))
+              isPrime(n)
+             
+              let fibo = n =>{
+                a = 0
+                b = 1
+                if (n ==1){
+                    document.write(a)
+                }
+                if (n==2){
+                    document.write(a)
+                    document.write(b)
+                }
+                else{
+                    document.write(a)
+                    document.write(b)
+                    for(let i = 3;i <=n; i++){
+                        c = a + b;
+                        a = b;
+                        b = c;
+                        document.write(c)
+                    }
+                }
+              }
+              n = Number(prompt("Enter up to which term"))
+              fibo(n)
+               */
+    </script>
+</body>
+</html>
