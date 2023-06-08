@@ -23,9 +23,48 @@
 
         ceil = Math.ceil(r)
         document.write("<br>" + ceil)
-        
+
         floor = Math.floor(r)
         document.write("<br>" + floor)
+
+        dice = Math.ceil(Math.random() * 6)
+        document.write("<br>" + dice)
+
+        price = r.toFixed(2);
+        document.write("<br>" + price)
+
+        precise = r.toPrecision(3)
+        document.write("<br>" + precise)
+
+        //Date time function
+
+        let now = Date.now();//returns time in milliseconds
+        document.write("<br>" + now)
+
+        now = new Date(2000, 0, 10, 23, 1, 1);//year month day hour minute second
+        document.write("<br>" + now)
+        
+
+        year = now.getFullYear();
+        document.write("<br>" + year)
+
+        month = now.getMonth();
+        document.write("<br>" + month)
+
+        
+        date = now.getDay();
+        hour = now.getHours();
+        min = now.getMinutes();
+        sec = now.getSeconds();
+        ms = now.getMilliseconds();
+        today = new Date;
+
+        let date_now = today.toLocaleDateString();
+        let time_now = today.toLocaleTimeString();
+        document.write("<br>" + date_now)
+        document.write("<br>" + time_now)
+        
+
        
     </script>
    
