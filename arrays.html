@@ -98,7 +98,13 @@
     document.write("<br> New fruits uppercase using map" + fruits2)
 
    
+    let filtered = fruits.filter(item => item.match('zzz'))
+    document.write("<br>filtered: " + filtered)
 
+    let find = fruits.find(item => item.match('zzz'))
+    document.write("<br>find: " + find)
+    let findIndex = fruits.findIndex(item => item.match('zzz'))
+    document.write("<br>findIndex: " + findIndex)
 
 
 
