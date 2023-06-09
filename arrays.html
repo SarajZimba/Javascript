@@ -58,6 +58,54 @@
         let new_fruits = fruits.slice( -3, -1)
         document.write("<br> new fruits : " + new_fruits)
 
+        let fruits1 = new_fruits.concat(fruits, ["aaa", "bbb"])
+        document.write("<br> fruits1 : " + fruits1)
+
+        //for-loop
+        for(i=0; i<fruits.length; i++){
+            document.write(`<li>${fruits[i]}</li>`)
+        }
+
+        //for-in loop
+
+        for(var item in fruits){
+            document.write(`<li>${fruits[item]}</li>`)
+        }
+        //for-of loop
+
+        for(var item of fruits){
+            document.write(`<h4>${item}</h4>`)
+        }
+
+        //forEach loop
+        
+        document.write("<br> from ARROW FUNCTION forEach" )
+        fruits.forEach((item, i) =>{
+                document.write(`<h3>${[i+1]} . ${item}</h3>`)
+        })
+        document.write("<br> from forEach" )
+        fruits.forEach(function(item){
+                document.write(`<h3>${item}</h3>`)
+        })
+
+        //map display and also do some operation and return it 
+        document.write("<br> From map ")
+        fruits.map((item, i) =>{
+            document.write(`<h3>${[i+1]} . ${item}</h3>`)
+    })
+
+    let fruits2 = fruits.map(item => item.toUpperCase())
+    document.write("<br> New fruits uppercase using map" + fruits2)
+
+   
+
+
+
+
+
+
+
+
 
 
 
