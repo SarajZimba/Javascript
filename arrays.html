@@ -32,17 +32,20 @@
         document.write("<br> Unshift Result :" + fruits)
 
         //pop - removes from the end
-        fruits.pop()
+        deleted = fruits.pop()
         document.write("<br> Pop Result: " + fruits)
+        document.write("<br> Deleted Result: " + deleted)
 
         //shift - removes from the start
-        fruits.shift()
+        shifted=fruits.shift()
         document.write("<br> Shift Result: " + fruits)
+        document.write("<br> Shifted element: " + shifted)
 
         //splice(index,number of items to be removed, new_items)
 
-        fruits.splice(1, 2, "grapes ", "strawberry")
+        spliced  = fruits.splice(1, 2, "grapes ", "strawberry")
         document.write("<br> Splice Result: " + fruits)
+        document.write("<br> Spliced element: " + spliced)
 
         fruits.reverse()
         document.write("<br> Reverse : " + fruits)
@@ -54,6 +57,8 @@
 
         let new_fruits = fruits.slice( -3, -1)
         document.write("<br> new fruits : " + new_fruits)
+
+
 
 
     </script>
