@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <!-- 
+        array
+        collection of similar/dissimilar -->
+    <script>
+
+        let arr = [1, 2, 3, "abc ", "def", [4, 5, 6], {"key": "value"}, true, false ]
+
+        document.write(arr)
+
+        let len = arr.length
+        document.write("<br>" + arr[len-1])
+
+        document.write("<br> Length : " + len)
+
+        let fruits = ["apple", "orange", "banana", "mango", "papaya"]
+        document.write("Original Array" + fruits)
+        fruits.push("pear")
+        //push - adds new item at the end of the array
+
+        document.write("<br> Push Result :" + fruits)
+        //unshift - adds new item to the start of the array
+        fruits.unshift("grapes")
+        document.write("<br> Unshift Result :" + fruits)
+
+        //pop - removes from the end
+        fruits.pop()
+        document.write("<br> Pop Result: " + fruits)
+
+        //shift - removes from the start
+        fruits.shift()
+        document.write("<br> Shift Result: " + fruits)
+
+        //splice(index,number of items to be removed, new_items)
+
+        fruits.splice(1, 2, "grapes ", "strawberry")
+        document.write("<br> Splice Result: " + fruits)
+
+
+    </script>
+</body>
+</html>
