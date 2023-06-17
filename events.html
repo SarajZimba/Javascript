@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Hello World</h1>
+    <input type=" text" id="input">
+
+    <script>
+        let input = document.getElementById('input')
+        let h = document.getElementById('h1')
+        function change_font(){
+            h.style.color = "red"
+
+
+        }
+        function change_color(){
+            h.style.color = "blue"
+
+
+        }
+         
+        function write_h1(){
+            h.innerHTML = input.value
+        }
+
+        //input.addEventListener('change', write_h1)
+        input.addEventListener('keyup', write_h1)
+        //input.addEventListener('keydown', write_h1)
+        input.addEventListener('focus', change_font)
+        input.addEventListener('blur', change_color)
+
+
+        h.addEventListener('mouseenter', change_font)
+        h.addEventListener('mouseleave', change_color)
+        
+
+    </script>
+
+  
+</body>
+</html>
