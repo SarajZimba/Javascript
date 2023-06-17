@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <input type="password" id="pwd">
+    <span onclick="show_hide_password()">SHOW</span>
+
+    <span onclick="change_icon()"><i class="bi bi-brightness-high" id="light"></i></span>
+    <script>
+        //DOM - document object model
+
+        /*
+        create html element
+        add html element
+        change contents
+        change styles
+        add/change attributes
+        handle html events
+
+        method, properties
+        methods:
+
+            getElementById()
+            getElementByTagName()
+            getElementByClassName()
+            querySelector()
+
+        properties:
+            innerHTML
+            value
+            style //.style.properties
+            attributes(src, type)
+
+        events:
+
+            keyboard events:keyUp, keyPressed,KeyDown
+            mouse events: mouseOver, mouseEnter, mouseLeave
+            form events: focus, blur, change
+
+
+
+        */
+
+        let i=0;
+
+        let icon = document.getElementsByTagName('span')[1]
+
+        const change_icon = () =>{
+            if(i==0){
+                i=1;
+                icon.innerHTML="<i class='bi bi-moon'></i>"
+            }
+            else{
+                i=0;
+                icon.innerHTML="<i class='bi bi-brightness-high'></i>"
+            }
+        }
+
+        //show hide password
+        let state = "password"
+        let btn = document.getElementsByTagName('span')[0]
+        const show_hide_password = () =>{
+            if(state=="password"){
+                state="text"
+                document.getElementById('pwd').setAttribute("type", "text") //can also be done using  getElementsById('pwd').type="text"
+                btn.innerHTML = "<i class = 'bi bi-eye-slash'>"
+            }
+            else{
+                state="password"
+                document.getElementById('pwd').setAttribute("type", "password")
+                btn.innerHTML = "<i class='bi bi-eye'>"
+            }   
+        }
+
+    </script>
+</body>
+</html>
