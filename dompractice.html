@@ -1,0 +1,25 @@
+
+
+<input type="password" value="Password" id="password">
+<span ><button id="Button" onclick="show_hide_password()">SHOW</button></span>
+
+<body>
+    
+    <script>
+        let i =0;
+        const show_hide_password = () =>{
+             let button = document.getElementById("Button")
+             
+             if(i==0){
+                i=1;
+                document.getElementById('password').setAttribute("type", "text")
+                button.innerHTML = "HIDE"
+             }
+             else{
+                i = 0;
+                document.getElementById('password').setAttribute("type", "password")
+                button.innerHTML = "SHOW"
+             }
+        }
+    </script>
+</body>
