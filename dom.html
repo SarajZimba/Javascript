@@ -54,10 +54,14 @@
             if(i==0){
                 i=1;
                 icon.innerHTML="<i class='bi bi-moon'></i>"
+                document.getElementsByTagName('body')[0].style.backgroundColor = "black"
+                document.getElementsByTagName('body')[0].style.color = "white"
             }
             else{
                 i=0;
                 icon.innerHTML="<i class='bi bi-brightness-high'></i>"
+                document.getElementsByTagName('body')[0].style.backgroundColor = "white"
+                document.getElementsByTagName('body')[0].style.color = "black"
             }
         }
 
