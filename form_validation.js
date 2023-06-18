@@ -34,5 +34,20 @@ const age_validate = () =>{
     }
 }
 
+const phone_validate = () =>{
+    let phone = document.getElementById('phone').value
+    if(!phone.match(/^[0-9]+$/)){
+        display_msg("phone-msg", "Phone numbers must have only numbers", "red")
+    }
+
+    else if(phone.length < 10 || phone.length > 10){
+        display_msg("phone-msg", "Phone numbers must have 10 numbers", "red")
+    }
+    else{
+        display_msg("phone-msg", "Phone number is valid", "green")
+    }
+}
+
 document.getElementById('name').addEventListener('keyup', name_validate)
 document.getElementById('age').addEventListener('keyup', age_validate)
+document.getElementById('phone').addEventListener('keyup', phone_validate)
