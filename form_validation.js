@@ -48,6 +48,47 @@ const phone_validate = () =>{
     }
 }
 
+const email_validate = () =>{
+    let email = document.getElementById('email').value
+
+    if(email.match(/^@/)){
+        display_msg("email-msg", "INvalid email", "red")
+        return false
+    }
+    else if (email.charAt(email.length - 4) != '.'){
+        display_msg("email-msg", "INvalid . position", "red")
+        return false
+    }
+    else{
+        display_msg("email-msg", "valid email", "green")
+    }
+
+}
+
+const password_validate = () =>{
+    let password = document.getElementById('pwd').value
+    let confirm_password = document.getElementById('cpwd').value
+
+    if(!(password == confirm_password)){
+        display_msg("cpwd-msg", "Passwords not matching", "red")
+    }
+    else{
+        display_msg("cpwd-msg", "Passwords matching", "green")
+       
+    }
+    if(password.length < 3 || password.length > 20 ){
+        display_msg("pwd-msg", "Passwords must be greater then 3 and not greater than 20", "red")
+    }
+    else{
+        display_msg("pwd-msg", "Passwords valid", "green")
+       
+    }
+
+}
+
 document.getElementById('name').addEventListener('keyup', name_validate)
 document.getElementById('age').addEventListener('keyup', age_validate)
 document.getElementById('phone').addEventListener('keyup', phone_validate)
+document.getElementById('email').addEventListener('keyup', email_validate)
+document.getElementById('cpwd').addEventListener('keyup', password_validate)
+document.getElementById('pwd').addEventListener('keyup', password_validate)
