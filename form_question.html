@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form action="" onsubmit="return form_validate()">
+        <input type="text" placeholder="username" id="username">
+        <span id="username-msg"></span>
+        <br>
+        <input type="text" placeholder="phone" id="phone">
+        <span id="phone-msg"></span>
+        <br>
+        <input type="text" placeholder="email" id="email">
+        <span id="email-msg"></span>
+        <br>
+        <input type="text" placeholder="password" id="password">
+        <span id="password-msg"></span>
+        <br>
+        <input type="submit" value="submit"> 
+    </form>
+
+    <span id="form-msg"></span>
+
+
+    <script type="text/javascript">
+        
+        var phone = document.getElementById("phone").value
+        var email = document.getElementById("email").value
+        var password = document.getElementById("password").value
+
+        const username_validate = () =>{
+            let username = document.getElementById("username").value
+            if(!username.match(/^[a-zA-Z]+$/)){
+                document.getElementById("username-msg").innerHTML = "Name must contain only characters"
+                return false
+            }
+            else if(!username.match(/^.{3,30}$/)){
+                document.getElementById("username-msg").innerHTML = "Name must be of at least 3 characters and maximum of 30 characters"
+                return false
+            }
+            else{
+                document.getElementById("username-msg").innerHTML = "Name is valid"
+                return true
+
+            }
+        }
+
+        const email_validate = () =>{
+            let email = document.getElementById("email").value
+
+            if(!email.match(/^[a-zA-Z][a-zA-Z0-9._]+[@][a-zA-Z]+[.][a-z]+$/)){
+                document.getElementById("email-msg").innerHTML = "Invalid format"
+                return false
+            }
+            else{
+                document.getElementById("email-msg").innerHTML = "Valid"
+                return true
+            }
+        }
+
+        const phone_validate = () =>{
+
+            let phone = document.getElementById("phone").value
+
+            if(!phone.match(/^[1-9]+$/)){
+                document.getElementById("phone-msg").innerHTML = "Phone number must have only numbers"
+                return false
+            }
+
+            else if(!phone.match(/^98(9|8|7|6|5|4|3|2|1).*/)){
+                document.getElementById("phone-msg").innerHTML = "Phone numbers must start with 987 989"
+                return false
+            }
+
+             else if(!phone.match(/^.{10}$/)){
+                document.getElementById("phone-msg").innerHTML = "Phone numbers must be of 10 digits only"
+                return false
+
+            } 
+
+            else{
+                document.getElementById("phone-msg").innerHTML = "Valid number"
+                return true
+            }
+
+        }
+
+        const password_validate = () => {
+            let password = document.getElementById("password").value
+            if(!password.match(/[a-z]/)){
+                document.getElementById("password-msg").innerHTML = "Password must contain at least one lowercase"
+                return false
+            }
+            else if(!password.match(/[A-Z]/)){
+                document.getElementById("password-msg").innerHTML = "Password must contain at least one uppercase"
+                return false
+            }
+            else if(!password.match(/[0-9]/)){
+                document.getElementById("password-msg").innerHTML = "Password must contain at least one number"
+                return false
+            }
+            else if(!password.match(/[!@#$%^&*()\-+]/)){
+                document.getElementById("password-msg").innerHTML = "Password must contain at least one special character"
+                return false
+            }
+
+            else if(!password.match(/.{8}/)){
+                document.getElementById("password-msg").innerHTML = "Password must be of at least 8 characters"
+                return false
+
+            }
+
+            else{
+                document.getElementById("password-msg").innerHTML = "Password is valid"
+                return true
+
+            }
+
+        }
+
+        const form_validate = () => {
+            if(username_validate() && phone_validate() && email_validate() && password_validate()){
+                return true
+                
+            }
+            else{
+                return false
+            }
+        }
+
+        if(form_validate() == true){
+            alert("Form has been submitted successfully")
+        }
+
+        document.getElementById('username').addEventListener('keyup', username_validate)
+        document.getElementById('email').addEventListener('keyup', email_validate)
+        document.getElementById('phone').addEventListener('keyup', phone_validate)
+        document.getElementById('password').addEventListener('keyup', password_validate)
+
+
+        let form = document.getElementsByTagName("form")[0];
+        form.addEventListener("submit", (e) => {
+        // e.preventDefault();
+        if(form_validate() == true){
+            confirm("Form has been submitted successfully")
+        }
+        else{
+        alert("Form Could not be Submitted!");
+        }
+});
+        
+    </script>
+</body>
+</html>
