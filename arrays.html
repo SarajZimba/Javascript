@@ -107,8 +107,24 @@
     document.write("<br>findIndex: " + findIndex)
 
 
+    let num = [9, 6, ,5, 7, 3, 1, 6, 0 ]
 
+    document.write("<br>" + num.sort((a, b)=> a-b))
+    // document.write(num)
 
+    let sum = num.reduce((accumulator, current) =>{
+        document.write(`<br> Acc = ${accumulator}, curr = ${current}`)
+        return accumulator + current
+
+    })
+    document.write("<br> Sum = " + sum)
+
+    sum = num.reduceRight((accumulator, current) =>{
+        document.write(`<br> Acc = ${accumulator}, curr = ${current}`)
+        return accumulator + current
+    })
+
+    document.write("<br> Sum = " + sum)
 
 
 
